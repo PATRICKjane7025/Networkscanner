@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Network Scanner</h1>
+        <h2>Now only top 100 Ports</h2>
+        
+        <form method="POST" action="/">
+            <label for="target">Target (IP or URL):</label>
+            <input type="text" id="target" name="target" placeholder="Enter IP or URL..." required>
+            
+            <label>
+                <input type="checkbox" name="authorized" required>
+                I am authorized to scan this target
+            </label>
+            
+            <button type="submit">Start Scan</button>
+        </form>
+
+        {% if scan_results %}
+        <div class="result-section">
+            <h2>Scan Results for {{ target }}:</h2>
+            
+            <h3>Open Ports:</h3>
+            <ul>
+                {% for port in scan_results['Open Ports'] %}
+                <li>Port: {{ port }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Version-Based Vulnerabilities:</h3>
+            <ul>
+                {% for vuln in scan_results['Version-Based Vulnerabilities'] %}
+                <li>{{ vuln }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Sn1per Vulnerabilities:</h3>
+            <ul>
+                {% for vuln in scan_results['Sn1per Vulnerabilities'] %}
+                <li>{{ vuln }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Service Misconfigurations:</h3>
+            <ul>
+                {% for misconfig in scan_results['Service Misconfigurations'] %}
+                <li>{{ misconfig }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

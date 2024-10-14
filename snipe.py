@@ -1,0 +1,18 @@
+snipervulns = {
+   "FTP": ["Sn1per Vuln1: Brute Force Vulnerability", "Sn1per Vuln2: Default Credentials"],
+    "SSH": ["Sn1per Vuln1: OpenSSH RCE CVE-2021-41617", "Sn1per Vuln2: Weak Key Exchange Methods"],
+    "HTTP": ["Sn1per Vuln1: SQL Injection Detected", "Sn1per Vuln2: XSS Vulnerability"],
+    "HTTPS": ["Sn1per Vuln1: SSL/TLS Vulnerability", "Sn1per Vuln2: Certificate Validation Issue"],
+    "SMTP": ["Sn1per Vuln1: Open Relay Detected", "Sn1per Vuln2: Spoofing Vulnerability"],
+    "Telnet": ["Sn1per Vuln1: Default Password", "Sn1per Vuln2: Weak Encryption"],
+    "DNS": ["Sn1per Vuln1: DNS Cache Poisoning", "Sn1per Vuln2: DNS Amplification Attack"],
+    "SMB": ["Sn1per Vuln1: SMB RCE CVE-2020-0796", "Sn1per Vuln2: SMB Lateral Movement"],
+    "RDP": ["Sn1per Vuln1: RDP Brute Force", "Sn1per Vuln2: RDP Man-in-the-Middle"],
+    "MySQL": ["Sn1per Vuln1: MySQL SQL Injection", "Sn1per Vuln2: MySQL Authentication Bypass"],
+    "PostgreSQL": ["Sn1per Vuln1: PostgreSQL SQL Injection", "Sn1per Vuln2: PostgreSQL Authentication Bypass"],
+    "MSSQL": ["Sn1per Vuln1: MSSQL SQL Injection", "Sn1per Vuln2: MSSQL Authentication Bypass"],
+    "Oracle": ["Sn1per Vuln1: Oracle SQL Injection", "Sn1per Vuln2: Oracle Authentication Bypass"],
+    "NFS": ["Sn1per Vuln1: NFS Permissions Vulnerability", "Sn1per Vuln2: NFS Data Exposure"],
+    "SFTP": ["Sn1per Vuln1: SFTP Authentication Bypass", "Sn1per Vuln2: SFTP Data Exposure"],
+    "VNC": ["Sn1per Vuln1: VNC Authentication Bypass", "Sn1per Vuln2: VNC Data Exposure"],
+}
